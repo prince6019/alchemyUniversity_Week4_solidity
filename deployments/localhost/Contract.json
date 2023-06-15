@@ -1,0 +1,61 @@
+{
+  "address": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "Winner",
+      "type": "event"
+    },
+    {
+      "inputs": [],
+      "name": "attempt",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "transactionHash": "0x8491be785ee2425a3b8edefe4a8ad1ec626a4ae728fb0008c021c1dc3091febe",
+  "receipt": {
+    "to": null,
+    "from": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+    "contractAddress": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+    "transactionIndex": 0,
+    "gasUsed": "157721",
+    "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "blockHash": "0x44e5a6855c9c3797f6a97eef5ac8df77bc2d216d9fde1bb2e15351540c60d8ae",
+    "transactionHash": "0x8491be785ee2425a3b8edefe4a8ad1ec626a4ae728fb0008c021c1dc3091febe",
+    "logs": [],
+    "blockNumber": 1,
+    "cumulativeGasUsed": "157721",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [],
+  "numDeployments": 1,
+  "solcInputHash": "0252fd666ffe5e83e4c4625e77ff1f70",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.0+commit.c7dfd78e\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"Winner\",\"type\":\"event\"},{\"inputs\":[],\"name\":\"attempt\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/contract.sol\":\"Contract\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"contracts/contract.sol\":{\"content\":\"// SPDX-License-Identifier:MIT\\npragma solidity ^0.8.0;\\n\\ncontract Contract {\\n    event Winner(address);\\n\\n    function attempt() external {\\n        require(msg.sender != tx.origin, \\\"msg.sender is equal to tx.origin\\\");\\n        emit Winner(msg.sender);\\n    }\\n}\\n\",\"keccak256\":\"0x0d0d7591e881c37befa60cafc0c19e1b8e9eaac79d6f75f5fe4e55aba94fab1e\",\"license\":\"MIT\"}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b506101e5806100206000396000f3fe608060405234801561001057600080fd5b506004361061002b5760003560e01c8063732b7a8d14610030575b600080fd5b61003861003a565b005b3273ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614156100a9576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004016100a09061014c565b60405180910390fd5b7f745c90b656b4aafe296c8ca35aeacfe56cb96c90e1d320e5da643fff1051b6c0336040516100d89190610131565b60405180910390a1565b6100eb8161017d565b82525050565b60006100fe60208361016c565b91507f6d73672e73656e64657220697320657175616c20746f2074782e6f726967696e6000830152602082019050919050565b600060208201905061014660008301846100e2565b92915050565b60006020820190508181036000830152610165816100f1565b9050919050565b600082825260208201905092915050565b60006101888261018f565b9050919050565b600073ffffffffffffffffffffffffffffffffffffffff8216905091905056fea26469706673582212209e9ac9fb54064b67befc0c204628ec180555c51bb16418fdd2ceb2de1e5abd5c64736f6c63430008000033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b506004361061002b5760003560e01c8063732b7a8d14610030575b600080fd5b61003861003a565b005b3273ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614156100a9576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004016100a09061014c565b60405180910390fd5b7f745c90b656b4aafe296c8ca35aeacfe56cb96c90e1d320e5da643fff1051b6c0336040516100d89190610131565b60405180910390a1565b6100eb8161017d565b82525050565b60006100fe60208361016c565b91507f6d73672e73656e64657220697320657175616c20746f2074782e6f726967696e6000830152602082019050919050565b600060208201905061014660008301846100e2565b92915050565b60006020820190508181036000830152610165816100f1565b9050919050565b600082825260208201905092915050565b60006101888261018f565b9050919050565b600073ffffffffffffffffffffffffffffffffffffffff8216905091905056fea26469706673582212209e9ac9fb54064b67befc0c204628ec180555c51bb16418fdd2ceb2de1e5abd5c64736f6c63430008000033",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [],
+    "types": null
+  }
+}

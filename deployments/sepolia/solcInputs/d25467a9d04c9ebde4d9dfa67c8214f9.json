@@ -1,0 +1,35 @@
+{
+  "language": "Solidity",
+  "sources": {
+    "contracts/Proxy.sol": {
+      "content": "// SPDX-License-Identifier:MIT\npragma solidity ^0.8.0;\n\ncontract Proxy {\n    address public owner;\n\n    constructor() {\n        owner = msg.sender;\n    }\n\n    function callContract(address target) external {\n        (bool success, ) = target.call(abi.encodeWithSignature(\"attempt()\"));\n        require(success);\n    }\n}\n"
+    }
+  },
+  "settings": {
+    "optimizer": {
+      "enabled": false,
+      "runs": 200
+    },
+    "outputSelection": {
+      "*": {
+        "*": [
+          "abi",
+          "evm.bytecode",
+          "evm.deployedBytecode",
+          "evm.methodIdentifiers",
+          "metadata",
+          "devdoc",
+          "userdoc",
+          "storageLayout",
+          "evm.gasEstimates"
+        ],
+        "": [
+          "ast"
+        ]
+      }
+    },
+    "metadata": {
+      "useLiteralContent": true
+    }
+  }
+}

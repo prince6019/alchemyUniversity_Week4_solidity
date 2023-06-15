@@ -1,0 +1,38 @@
+{
+  "language": "Solidity",
+  "sources": {
+    "contracts/contract.sol": {
+      "content": "// SPDX-License-Identifier:MIT\npragma solidity ^0.8.0;\n\ncontract Contract {\n    event Winner(address);\n\n    function attempt() external {\n        require(msg.sender != tx.origin, \"msg.sender is equal to tx.origin\");\n        emit Winner(msg.sender);\n    }\n}\n"
+    },
+    "contracts/Proxy.sol": {
+      "content": "// SPDX-License-Identifier:MIT\npragma solidity ^0.8.0;\n\ncontract Proxy {\n    address public owner;\n\n    constructor() {\n        owner = msg.sender;\n    }\n\n    function callContract(address target, bytes memory data) external {\n        (bool success, ) = target.call(data);\n        require(success);\n    }\n}\n"
+    }
+  },
+  "settings": {
+    "optimizer": {
+      "enabled": false,
+      "runs": 200
+    },
+    "outputSelection": {
+      "*": {
+        "*": [
+          "abi",
+          "evm.bytecode",
+          "evm.deployedBytecode",
+          "evm.methodIdentifiers",
+          "metadata",
+          "devdoc",
+          "userdoc",
+          "storageLayout",
+          "evm.gasEstimates"
+        ],
+        "": [
+          "ast"
+        ]
+      }
+    },
+    "metadata": {
+      "useLiteralContent": true
+    }
+  }
+}
